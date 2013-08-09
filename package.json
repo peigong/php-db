@@ -1,0 +1,27 @@
+{
+  "name": "php-db",
+  "title": "PHP版本的数据库访问框架",
+  "description": "PHP版本的数据库访问框架",
+  "version": "0.0.1",
+  "homepage": "https://github.com/peigong/php-db",
+  "author": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peigong/php-db.git"
+  },
+  "bugs": "https://github.com/peigong/php-db/issues",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/peigong/php-db/blob/master/LICENSE-MIT"
+    }
+  ],
+  "dependencies": {
+  },
+  "keywords": [],
+  "devDependencies": {
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-copy": "~0.4.0",
+    "grunt": "~0.4.1"
+  }
+}
