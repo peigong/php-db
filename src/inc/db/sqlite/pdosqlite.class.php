@@ -94,7 +94,7 @@ class PDOSQLite implements IDbAccessEnable{
         if(strlen($db) > 0){
             //首先使用方法中传递过来的数据库
             $db_name = $db;
-        }elseif(strlen(SQLITEDATABASE) > 0){
+        }elseif(defined('SQLITEDATABASE')){
             //其次使用系统配置文件中定义的常量SQLITEDATABASE
             $db_name = SQLITEDATABASE;
         }elseif($this->database){
