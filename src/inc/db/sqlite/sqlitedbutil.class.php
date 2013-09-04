@@ -42,7 +42,10 @@ class SQLiteDbUtil implements IDbUtil{
     * @return {String} 导出的SQL。
     */
     public function export($db, $options){
-        $result = '';
+        $result = "/*\nSQLiteDbUtil SQL Export
+-- Generated On " .date("D, j M Y H:i:s T"). "
+-- Email:peigong@foxmail.com
+-- blog:http://www.peigong.tk\n*/\n\n";
         $type = DbObjectType_Table;
         if (array_key_exists('type', $options) && $options['type']) {
             $type = $options['type'];
@@ -126,10 +129,7 @@ class SQLiteDbUtil implements IDbUtil{
     }
 
     private function export_table($db, $name, $sql){
-        $result = "/*\nSQLiteDbUtil SQL Export
--- Generated On " .date("D, j M Y H:i:s T"). "
--- Email:peigong@foxmail.com
--- blog:http://www.peigong.tk\n*/\n\n";
+        $result = "";
         $result .= "DROP TABLE IF EXISTS $name;\n";
         $result .= $sql . ";\n\n";
         $rows = $this->dao->getData("select * from $name", $db);
